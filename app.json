@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "WasteNet",
+    "slug": "WasteNet",
+    "scheme": "wastenet",
+    "owner": "malkigunawardana",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.malkigunawardana.WasteNet",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "assets/icon.png"
+    },
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "extra": {
+      "redirectUri": "https://auth.expo.io/@malkigunawardana/WasteNet",
+      "EXPO_PUBLIC_WEB_CLIENT_ID": "810828947710-918etr5s3vr7mnvu1l2nbcf4h19fnul7.apps.googleusercontent.com",
+      "EXPO_PUBLIC_ANDROID_CLIENT_ID": "810828947710-918etr5s3vr7mnvu1l2nbcf4h19fnul7.apps.googleusercontent.com",
+      "EXPO_PUBLIC_IOS_CLIENT_ID": "810828947710-918etr5s3vr7mnvu1l2nbcf4h19fnul7.apps.googleusercontent.com",
+      "CLOUDINARY_CLOUD_NAME": "dfucm33vd",
+      "CLOUDINARY_UPLOAD_PRESET": "WasteNet",
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "52e871ac-7757-4c18-9e2a-7a370054cc71"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

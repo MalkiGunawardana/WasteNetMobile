@@ -1,0 +1,58 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# Temporary files and directories       //newly added
+AppData/
+node_modules/
+.expo/
+.expo-shared/
+.eas/
+.idea/
+
+# Microsoft Edge browser data (adjust if you use a different browser)
+AppData/Local/Microsoft/Edge/User Data/
+
+# Google Chrome browser data
+AppData/Local/Google/Chrome/User Data/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+#other common folders
+web-build/
+dist/

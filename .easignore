@@ -1,0 +1,26 @@
+# Ignore the problematic directories
+/AppData/Local/Google/Chrome/User Data/Default/IndexedDB
+/AppData/Local/Google/Chrome/User Data/Default/Cache
+/AppData/Local/Google/Chrome/User Data/Default/Service Worker/CacheStorage
+/AppData/Local/Temp
+
+# Other files and directories to ignore
+node_modules
+.expo
+dist
+web-build
+expo-env.d.ts
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+.metro-health-check*
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+.DS_Store
+*.pem
+.env*.local
+*.tsbuildinfo
