@@ -65,7 +65,7 @@ export default function AddItemScreen() {
   const requestPermissions = async () => {
     const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (status !== "granted") {
-      alert("Permission to access media library is required!");
+      alert(t("permissionToAccessMediaLibraryIsRequired"));
     }
   };
 
@@ -178,7 +178,7 @@ export default function AddItemScreen() {
             <Text style={styles.label}>{t("quantity")}</Text>
             <TextInput
               style={styles.input}
-              placeholder="Enter quantity"
+              placeholder={t("enterQuantity")}
               keyboardType="numeric"
               value={String(quantity)}
               onChangeText={(text) => setQuantity(Number(text))}
@@ -227,7 +227,7 @@ export default function AddItemScreen() {
             {loading ? (
               <View style={styles.loadingContainer}>
                 <ActivityIndicator color="#fff" />
-                <Text style={styles.loadingText}>Uploading...</Text>
+                <Text style={styles.loadingText}>{t("uploading")}</Text>
               </View>
             ) : (
               <Text style={styles.submitButtonText}>{t("addItem")}</Text>

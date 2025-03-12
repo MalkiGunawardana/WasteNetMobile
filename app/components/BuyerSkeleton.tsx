@@ -1,5 +1,5 @@
 // app/components/BuyerSkeleton.tsx
-import React from 'react';
+/*import React from 'react';
 import { View, Platform } from 'react-native';
 
 let SkeletonComponent = View;
@@ -22,5 +22,20 @@ export const BuyerSkeleton = () => {
         <View style={{ width: '100%', height: 20, borderRadius: 4, marginBottom: 10 }} />
       </View>
     </SkeletonComponent>
+  );
+};*/
+// app/components/BuyerSkeleton.tsx        correct for viewbuyerscreen
+import React from 'react';
+import { View} from 'react-native';
+import { SkeletonLoader } from './SkeletonLoader';
+
+export const BuyerSkeleton = () => {
+  return (
+    <View style={{ flex: 1, padding: 20 }}>
+      <SkeletonLoader width="60%" height={30} style={{ marginBottom: 20 }} />
+      <SkeletonLoader width="100%" height={20} style={{ marginBottom: 10 }} />
+      <SkeletonLoader width="100%" height={20} style={{ marginBottom: 10 }} />
+      <SkeletonLoader width="100%" height={20} style={{ marginBottom: 10 }} />
+    </View>
   );
 };

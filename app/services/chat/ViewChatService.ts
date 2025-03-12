@@ -1,4 +1,4 @@
-import { getFirestore, collection, addDoc, query, where, orderBy, onSnapshot } from "firebase/firestore";
+/*import { getFirestore, collection, addDoc, query, where, orderBy, onSnapshot } from "firebase/firestore";
 
 const firestore = getFirestore();
 
@@ -20,4 +20,13 @@ export const listenToChatMessages = (user1: string, user2: string, callback: any
     const messages = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
     callback(messages);
   });
+};*/
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, serverTimestamp } from "firebase/firestore";
+
+const firestore = getFirestore();
+
+export const saveChatMessage = async (chatData: any) => {
+  const chatRef = collection(firestore, "chats");
+  await addDoc(chatRef, { ...chatData, timestamp: serverTimestamp() });
 };
+

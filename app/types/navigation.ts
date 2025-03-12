@@ -14,10 +14,11 @@ export type RootStackParamList = {
   EnvironmentalInfo: undefined;
   HelpAndSupportScreen: undefined;
   PrivacyScreen: undefined;
-  ChatScreen: { userId: string };
+  //ChatScreen: { userId: string };
+  ChatScreen: undefined;
   EditItemScreen: { itemId: string };
   UpdateItem: { itemId: string };
-  ViewChatScreen: { receiverId: string; receiverName: string };
+  ViewChatScreen: { chatId: string; receiverId: string; receiverName: string };
   ForgotPasswordScreen: undefined;
   AllBuyersScreen: undefined;
   

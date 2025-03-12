@@ -195,24 +195,24 @@ export default function UserItemsScreen() {
         >
           <View style={styles.modalOverlay}>
             <View style={styles.modalView}>
-              <Text style={styles.modalTitle}>Update Status</Text>
+              <Text style={styles.modalTitle}>{t("updateStatus")}</Text>
               <Pressable
                   style={[styles.modalButton, styles.soldButton]}
                   onPress={() => updateItemStatus(selectedItem.id, "sold")}
                 >
-                  <Text style={styles.modalButtonText}>Mark as Sold</Text>
+                  <Text style={styles.modalButtonText}>{t("markAsSold")}</Text>
                 </Pressable>
                 <Pressable
                   style={[styles.modalButton, styles.donatedButton]}
                   onPress={() => updateItemStatus(selectedItem.id, "donated")}
                 >
-                  <Text style={styles.modalButtonText}>Mark as Donated</Text>
+                  <Text style={styles.modalButtonText}>{t("markAsDonated")}</Text>
                 </Pressable>
                 <Pressable
                     style={[styles.modalButton, styles.closeButton]}
                     onPress={() => setModalVisible(false)}
                   >
-                    <Text style={styles.modalButtonText}>Cancel</Text>
+                    <Text style={styles.modalButtonText}>{t("cancel")}</Text>
                   </Pressable>
             </View>
           </View>

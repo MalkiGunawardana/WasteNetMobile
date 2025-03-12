@@ -11,6 +11,7 @@ import Constants from "expo-constants";
 import * as FileSystem from "expo-file-system";
 
 import { NavigationProp } from "@react-navigation/native";
+import { t } from "i18next";
 
 interface ItemServiceProps {   
   itemType: string;
@@ -141,29 +142,29 @@ export function ItemService({    //recieve props define in above
 
   const handleSubmit = async () => {
     if (!title.trim()) {
-      alert("Please enter a title");
+      alert(t("pleaseEnterATitle"));
       return;
     }
     if (!description.trim()) {
-      alert("Please enter a description");
+      alert(t("pleaseEnterADescription"));
       return;
     }
     if (quantity < 1) {
-      alert("Quantity must be at least 1");
+      alert(t("quantityMustBeAtLeast1"));
       return;
     }
     if (images.length === 0) {
-      alert("Please select at least one image");
+      alert(t("pleaseSelectAnAtLeastOneImage"));
       return;
     }
     if (transactionType === "sell" && (!price || parseFloat(price) <= 0)) {
-      alert("Please enter a valid price");
+      alert(t("pleaseEnterAValidPrice"));
       return;
     }
 
     const user = auth.currentUser;
     if (!user) {
-      alert("Please sign in first");
+      alert(t("pleaseSignInFirst"));
       promptAsync();
       return;
     }

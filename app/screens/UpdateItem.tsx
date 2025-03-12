@@ -85,14 +85,14 @@ export default function UpdateItemScreen({ route, navigation }: any) {
       }
     } catch (error) {
       console.error("Error fetching item data:", error);
-      alert("Failed to fetch item details.");
+      alert(t("failedToFetchItemDetails"));
     }
   };
 
   const requestPermissions = async () => {
     const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (status !== "granted") {
-      alert("Permission to access media library is required!");
+      alert("permissionToAccessMediaLibraryIsRequired");
     }
   };
 
@@ -111,12 +111,12 @@ export default function UpdateItemScreen({ route, navigation }: any) {
               setLoading(true);
               await deleteDoc(doc(firestore, "items", itemId));
               setLoading(false);
-              alert("Item deleted successfully");
+              alert(t("itemDeletedSuccessfully"));
               navigation.navigate("MainTabs", { screen: "Home" });
             } catch (error) {
               setLoading(false);
               console.error("Error deleting item:", error);
-              alert("Failed to delete the item.");
+              alert(t("itemDeleteFailed"));
             }
           },
         },
@@ -236,7 +236,7 @@ export default function UpdateItemScreen({ route, navigation }: any) {
               </Text>
               <TextInput
                 style={styles.input}
-                placeholder="Enter price"
+                placeholder={t("enterPrice")}
                 keyboardType="numeric"
                 value={price}
                 onChangeText={setPrice}
@@ -249,7 +249,7 @@ export default function UpdateItemScreen({ route, navigation }: any) {
             <Text style={styles.label}>{t("quantity")}</Text>
             <TextInput
               style={styles.input}
-              placeholder="Enter quantity"
+              placeholder={t("enterQuantity")}
               keyboardType="numeric"
               value={String(quantity)}
               onChangeText={(text) => setQuantity(Number(text))}

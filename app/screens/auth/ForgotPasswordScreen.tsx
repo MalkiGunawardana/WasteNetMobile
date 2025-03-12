@@ -30,7 +30,7 @@ export default function ForgotPasswordScreen() {
   // Handle the "Send Reset Email" button press
   const handleForgotPassword = async () => {
     if (!email) {
-      Alert.alert("Error", "Please enter your email.");
+      Alert.alert(t("errorPleaseEnterYourEmail"));
       return;
     }
 

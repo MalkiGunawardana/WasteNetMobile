@@ -1,4 +1,6 @@
 import { changeLanguage } from "i18next";
+import { addBuyer } from "../services/buyers/ViewBuyerScreenService";
+
 
 export default {
   welcome: "Welcome to our app",
@@ -71,8 +73,10 @@ export default {
   failedToOpenLink: "Failed to open link.",
   helpAndSupport: "Help & Support",
   faq: "Frequently Asked Questions",
-  faqDetail1: "This is where FAQ details go.",
+  faqDetail1: "This app connects householders, waste collectors, and donors to trade or donate waste items efficiently",
   faqQuestion1: "What is this app about?",
+  faqDetail2: "Go to Privacy > Reset Password",
+  faqDetail3: "Navigate to Help and Support > Contact Support",
   faqQuestion2: "How do I reset my password?",
   faqQuestion3: "How do I contact support?",
   contactSupport: "Contact Support",
@@ -85,7 +89,12 @@ export default {
   helpCenter: "Help Center",
   privacyPolicy: "Privacy Policy",
   termsOfService: "Terms of Service",
-
+  wantsToChatWithYou: "wants to chat with you",
+  accepted: "Accept",
+  reject: "Reject",
+  chatRequest: "Chat Request",
+  goToChat: "Go to Chat",
+  messagingRequest: "Messaging Request",
   //env-info
   t1: "Registered Collectors of Non-Hazardous Recyclable Waste",
   t2: "Authorized Collectors of Non-Hazardous/Non Contaminated Recyclable Waste from Ships",
@@ -142,6 +151,16 @@ export default {
   offerSentSuccessfully: "Request sent successfully",
   failedToSendOffer: "Failed to send request. Please try again",
   image: "Image",
+  fullNameIsRequired: "Full Name is required",
+  emailIsRequired: "Email is required",
+  passwordIsRequired: "Password is required",
+  invalidEmailFormat: "Invalid Email Format",
+  passwordMustBeAtLeast8Characters: "Password must be at least 8 characters",
+  confirmPasswordIsRequired: "Confirm Password is required",
+  passwordsDoNotMatch: "Passwords do not match",
+  signInErrorPleaseEnterYourEmail: "Sign in error. Please enter your email",
+  signInErrorPleaseEnterYourPassword: "Sign in error. Please enter your password",
+  signInErrorEmailOrPasswordIncorrect: "Email or password is incorrect. Check and try again",
 
   //Add Buyer
   name: "Name",
@@ -154,5 +173,61 @@ export default {
   enterPrice: "Enter Price",
   buyerAdded: "Buyer Added",
   recentlyAddedBuyers: "Buyers",
+  allBuyers: "All Buyers",
+  nameRequired: "Name is required",
+  phoneNumberRequired: "Phone Number is required",
+  locationRequired: "Location is required",
+  priceRequired: "Price is required",
+  priceInvalid: "Price is invalid",
+  addBuyerFailed: "Failed to add buyer. Please try again",
+  addBuyerSuccess: "Buyer added successfully",
+  errorFailedToLoadBuyers: "Error! failed to load buyers",
+  noBuyersFound: "No buyers found",
+  buyerDeleted: "Buyer Deleted",
+  buyerDeleteFailed: "Failed to delete buyer",
+  buyerDeleteSuccess: "Buyer deleted successfully",
+
+  //Items
+  itemAdded: "Item Added",
+  itemAddedSuccessfully: "Item added successfully",
+  itemUpdateFailed: "Failed to update item",
+  itemUpdateSuccess: "Item updated successfully",
+
+  // Status update modal
+  updateStatus: "Update Status",
+  markAsSold: "Mark as Sold",
+  markAsDonated: "Mark as Donated",
+
+  permissionToAccessMediaLibraryIsRequired: "Permission to access media library is required",
+
+  enterQuantity: "Enter Quantity",
+  enterPricePerItem: "Enter Price Per Item",
+  uploading: "Uploading...",
+  failedToUpload: "Failed to upload image",
+
+  errorPleaseEnterYourEmail: "Error. Please enter your email",
+
+  failedToFetchItemDetails: "Failed to fetch item details",
+  failedToFetchBuyerDetails: "Failed to fetch buyer details",
+  itemDeletedSuccessfully: "Item deleted successfully",
+  itemDeleteFailed: "Failed to delete item",
+
+  typeAMessage: "Type a message...",
+  requestChat: "Request Chat",
+  chatRequestSent: "Chat Request Sent",
+
+  pleaseEnterATitle: "Please enter a title",
+  pleaseEnterADescription: "Please enter a description",
+  pleaseEnterAQuantity: "Please enter a quantity",
+  pleaseEnterAPrice: "Please enter a price",
+  pleaseEnterALocation: "Please enter a location",
+  pleaseSelectAnImage: "Please select an image",
+  PleaseSelectAnItemType: "Please select an item type",
+  pleaseSelectATransactionType: "Please select a transaction type",
+  quantityMustBeAtLeast1: "Quantity must be at least 1",
+  pleaseSelectAnAtLeastOneImage: "Please select at least one image",
+  pleaseEnterAValidPrice: "Please enter a valid price",
+  pleaseSignInFirst: "Please sign in first",
+  
 
 };

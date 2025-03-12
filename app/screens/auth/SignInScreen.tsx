@@ -40,11 +40,11 @@ export default function SignInScreen() {
 
   const handleEmailSignIn = async () => {  //sign in with email
     if (!email.trim()) {
-      Alert.alert("Sign In Error", "Please enter your email.");
+      Alert.alert (t("signInErrorPleaseEnterYourEmail"));
       return;
     }
     if (!password.trim()) {
-      Alert.alert("Sign In Error", "Please enter your password.");
+      Alert.alert(t("signInErrorPleaseEnterYourPassword"));
       return;
     }
   
@@ -57,7 +57,7 @@ export default function SignInScreen() {
       });
     } catch (error: any) {
       const errorMessage = typeof error === "string" ? error : "An error occurred";
-      Alert.alert("Sign In Error", "Email or password is incorrect. Check and try again.", [{ text: "OK", onPress: () => setPassword("") }]);
+      Alert.alert(t("signInErrorEmailOrPasswordIncorrect")), [{ text: "OK", onPress: () => setPassword("") }];
     } finally {
       setLoadingEmailPassword(false);
     }

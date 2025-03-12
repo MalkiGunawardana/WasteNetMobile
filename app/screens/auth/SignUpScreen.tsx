@@ -56,28 +56,28 @@ export default function SignUpScreen() {
     let newErrors = { displayName: "", email: "", password: "", confirmPassword: "" };
 
     if (!displayName.trim()) {
-      newErrors.displayName = "Full name is required.";
+      newErrors.displayName = t("fullNameIsRequired");
       valid = false;
     }
     if (!email.trim()) {
-      newErrors.email = "Email is required.";
+      newErrors.email = t("emailIsRequired");
       valid = false;
     } else if (!validateEmail(email)) {
-      newErrors.email = "Invalid email format.";
+      newErrors.email = t("invalidEmailFormat");
       valid = false;
     }
     if (!password.trim()) {
-      newErrors.password = "Password is required.";
+      newErrors.password = t("passwordIsRequired");
       valid = false;
     } else if (password.length < 8) {
-      newErrors.password = "Password must be at least 8 characters.";
+      newErrors.password = t("passwordMustBeAtLeast8Characters");
       valid = false;
     }
     if (!confirmPassword.trim()) {
-      newErrors.confirmPassword = "Confirm password is required.";
+      newErrors.confirmPassword = t("confirmPasswordIsRequired");
       valid = false;
     } else if (confirmPassword !== password) {
-      newErrors.confirmPassword = "Passwords do not match.";
+      newErrors.confirmPassword = t("passwordsDoNotMatch");
       valid = false;
     }
 

@@ -25,6 +25,7 @@ import {
   type Timestamp,
 } from "firebase/firestore";
 import { ActivityIndicator } from "react-native";
+import { t } from "i18next";
 
 type RootStackParamList = {
   ViewItemScreen: { itemId: string };
@@ -145,7 +146,7 @@ export default function NotificationsScreen() {
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Ionicons name="chevron-back" size={24} color="#008F4C" />
         </TouchableOpacity>
-        <Text style={styles.headerText}>Notifications</Text>
+        <Text style={styles.headerText}>{t("notifications")}</Text>
       </View>
       {loading ? (
         <View style={styles.loadingContainer}>
@@ -165,7 +166,7 @@ export default function NotificationsScreen() {
                 <Ionicons name="pricetag" size={24} color="#008F4C" />
               </View>
               <View style={styles.notificationContent}>
-                {/* <TouchableOpacity
+                 <TouchableOpacity
                   onPress={() => {
                     markAsRead(offer.id);
                     navigation.navigate("ViewItemScreen", {
@@ -173,15 +174,15 @@ export default function NotificationsScreen() {
                     });
                   }}
                 >
-                  <Text style={styles.notificationTitle}>Messaging Request</Text>
+                  <Text style={styles.notificationTitle}>{t("messagingRequest")}</Text>
                   <Text style={styles.notificationMessage}>
-                    {offer.customerName} wants to chat with you about{" "}
+                    {offer.customerName} {t("wantsToChatWithYou")}{" "}
                     {offer.itemTitle}
                   </Text>
                   <Text style={styles.notificationTime}>
                     {offer.time.toDate().toLocaleString()}
                   </Text>
-                </TouchableOpacity> */}
+                </TouchableOpacity> 
 
                 {offer.isAccepted === null && !offer.read && (
                   <View style={styles.actionButtons}>
@@ -195,7 +196,7 @@ export default function NotificationsScreen() {
                         )
                       }
                     >
-                      <Text style={styles.actionButtonText}>Accept</Text>
+                      <Text style={styles.actionButtonText}>{t("accept")}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
@@ -208,7 +209,7 @@ export default function NotificationsScreen() {
                           styles.rejectButtonText,
                         ]}
                       >
-                        Reject
+                        {t("reject")}
                       </Text>
                     </TouchableOpacity>
                   </View>
@@ -238,7 +239,7 @@ export default function NotificationsScreen() {
                         }
                       >
                         <Text style={styles.inlineChatButtonText}>
-                          Go to Chat
+                        {t("goToChat")}
                         </Text>
                       </TouchableOpacity>
                     )}
