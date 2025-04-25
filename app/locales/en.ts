@@ -89,7 +89,7 @@ export default {
   helpCenter: "Help Center",
   privacyPolicy: "Privacy Policy",
   termsOfService: "Terms of Service",
-  wantsToChatWithYou: "wants to chat with you",
+  wantsToChatWithYou: "wants to chat with you about",
   accepted: "Accept",
   reject: "Reject",
   chatRequest: "Chat Request",
